@@ -1,0 +1,57 @@
+date,league,home_team,away_team,home_goals,away_goals
+2025-12-02,Premier League,Bournemouth,Everton,0,1
+2025-12-02,Premier League,Fulham,Man City,4,5
+2025-12-02,Premier League,Newcastle,Spurs,2,2
+2025-12-03,Premier League,Arsenal,Brentford,2,0
+2025-12-03,Premier League,Brighton,Aston Villa,3,4
+2025-12-03,Premier League,Burnley,Crystal Palace,0,1
+2025-12-03,Premier League,Wolves,Nott'm Forest,0,1
+2025-12-03,Premier League,Leeds,Chelsea,3,1
+2025-12-03,Premier League,Liverpool,Sunderland,1,1
+2025-12-04,Premier League,Man Utd,West Ham,1,1
+2025-12-06,Premier League,Aston Villa,Arsenal,2,1
+2025-12-06,Premier League,Bournemouth,Chelsea,0,0
+2025-12-06,Premier League,Everton,Nott'm Forest,3,0
+2025-12-06,Premier League,Man City,Sunderland,3,0
+2025-12-06,Premier League,Newcastle,Burnley,2,1
+2025-12-06,Premier League,Spurs,Brentford,2,0
+2025-12-06,Premier League,Leeds,Liverpool,3,3
+2025-12-07,Premier League,Brighton,West Ham,1,1
+2025-12-07,Premier League,Fulham,Crystal Palace,1,2
+2025-12-08,Premier League,Wolves,Man Utd,1,4
+2025-12-13,Premier League,Chelsea,Everton,2,0
+2025-12-13,Premier League,Liverpool,Brighton,2,0
+2025-12-13,Premier League,Burnley,Fulham,2,3
+2025-12-13,Premier League,Arsenal,Wolves,2,1
+2025-12-14,Premier League,Crystal Palace,Man City,0,3
+2025-12-14,Premier League,Nott'm Forest,Spurs,3,0
+2025-12-14,Premier League,Sunderland,Newcastle,1,0
+2025-12-14,Premier League,West Ham,Aston Villa,2,3
+2025-12-14,Premier League,Brentford,Leeds,1,1
+2025-12-15,Premier League,Man Utd,Bournemouth,4,4
+2025-12-20,Premier League,Newcastle,Chelsea,2,2
+2025-12-20,Premier League,Bournemouth,Burnley,1,1
+2025-12-20,Premier League,Brighton,Sunderland,0,0
+2025-12-20,Premier League,Man City,West Ham,3,0
+2025-12-20,Premier League,Wolves,Brentford,0,2
+2025-12-20,Premier League,Spurs,Liverpool,1,2
+2025-12-20,Premier League,Everton,Arsenal,0,1
+2025-12-20,Premier League,Leeds,Crystal Palace,4,1
+2025-12-21,Premier League,Aston Villa,Man Utd,2,1
+2025-12-22,Premier League,Fulham,Nott'm Forest,1,0
+2025-12-26,Premier League,Man Utd,Newcastle,1,0
+2025-12-27,Premier League,Nott'm Forest,Man City,1,2
+2025-12-27,Premier League,Arsenal,Brighton,2,1
+2025-12-27,Premier League,Brentford,Bournemouth,4,1
+2025-12-27,Premier League,Burnley,Everton,0,0
+2025-12-27,Premier League,Liverpool,Wolves,2,1
+2025-12-27,Premier League,West Ham,Fulham,0,1
+2025-12-27,Premier League,Chelsea,Aston Villa,1,2
+2025-12-28,Premier League,Sunderland,Leeds,1,1
+2025-12-28,Premier League,Crystal Palace,Spurs,0,1
+2025-12-30,Premier League,Burnley,Newcastle,1,3
+2025-12-30,Premier League,Chelsea,Bournemouth,2,2
+2025-12-30,Premier League,Nott'm Forest,Everton,0,2
+2025-12-30,Premier League,West Ham,Brighton,2,2
+2025-12-30,Premier League,Arsenal,Aston Villa,4,1
+2025-12-30,Premier League,Man Utd,Wolves,1,1

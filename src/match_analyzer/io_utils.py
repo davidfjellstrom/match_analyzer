@@ -100,3 +100,20 @@ def save_export(rows: list[dict[str, Any]], *, stem: str = "export") -> Path:
     out_path = export_path(filename)
     write_csv_dicts(out_path, rows)
     return out_path
+
+
+def save_text_export(lines: list[str], *, stem: str = "export") -> Path:
+    """
+    Sparar en TXT-export i exports/ med tidsstämpel.
+    Returnerar sökvägen till filen som skapades.
+    """
+    ensure_dir(EXPORT_DIR)
+    filename = timestamped_filename(stem, ".txt")
+    out_path = export_path(filename)
+
+    log.info(f"Skriver TXT: {out_path} med {len(lines)} rader")
+    with out_path.open("w", encoding="utf-8", newline="\n") as f:
+        f.write("\n".join(lines) + "\n")
+
+    log.info("TXT sparad")
+    return out_path
