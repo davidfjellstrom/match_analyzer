@@ -1,5 +1,3 @@
-import argparse
-
 from match_analyzer.io_utils import load_dataset
 from match_analyzer.analysis.models import Match
 from match_analyzer.analysis.report import league_report, export_league_report, export_league_report_txt
@@ -15,35 +13,36 @@ DATASET_MENU = {
 }
 
 
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        prog="match_analyzer",
-        description="Analysera fotbollsmatcher från CSV och skapa en enkel ligarapport.",
-    )
+def safe_input(prompt: str):
+    """
+    - Läser input på ett säkert sätt.
+    - Returnerar en sträng eller None om användaren avbröt (Ctrl+C eller Ctrl+D).
+    """
+    try:
+        return input(prompt)
+    except (KeyboardInterrupt, EOFError):
+        return None
+    
+    
+def get_menu_choice() -> str:
+    """
+    Validerar menyval för CLI:t.
+    Loopar tills användaren anger ett giltigt val (1/2/3/q) eller avbryter.
+    """
+    while True:
+        choice = safe_input("Välj alternativ (1, 2, 3 eller q): ")
 
-    parser.add_argument(
-        "--file",
-        help="CSV-fil att läsa. Antingen filnamn i data-mappen (t.ex. premier_league_dec_2025.csv) eller full path.",
-        default=None,
-    )
-    parser.add_argument(
-        "--min-matches",
-        type=int,
-        default=30,
-        help="Minsta antal matcher per liga för att inkluderas i rapporten (default: 30).",
-    )
-    parser.add_argument(
-        "--no-export",
-        action="store_true",
-        help="Om satt: exportera inte rapporten till exports/.",
-    )
-    parser.add_argument(
-        "--stem",
-        default="league_report",
-        help="Filnamns-stam för export (default: league_report).",
-    )
+        if choice is None:
+            print("\nAvslutar...\n")
+            raise SystemExit(0)
 
-    return parser.parse_args()
+        choice = choice.strip().lower()
+
+        # Endast giltiga menyval
+        if choice in ["1", "2", "3", "q"]:
+            return choice
+
+        print("Ogiltigt val. Välj 1, 2, 3 eller q.")
 
 
 def interactive_pick_file() -> tuple[str, str, str]:
@@ -53,7 +52,7 @@ def interactive_pick_file() -> tuple[str, str, str]:
     print("\nq) Quit\n")
 
     while True:
-        choice = input("Select option: ").strip().lower()
+        choice = get_menu_choice()
 
         if choice == "q":
             raise SystemExit(0)
@@ -95,20 +94,13 @@ def run_report(file_arg: str, min_matches: int, no_export: bool, stem: str) -> N
 
 
 def main() -> None:
-    args = parse_args()
-
-    # Om användaren inte angivit --file: visa meny
-    file_arg = args.file
-    stem = args.stem
-    label = None
-
-    if not file_arg:
-        file_arg, stem, label = interactive_pick_file()
-
+    file_arg, stem, _label = interactive_pick_file()
+    # Startpunkt för programmet
+    # Användaren väljer vilket dataset som ska analyseras, därefter körs analysen och rapport genereras.
     run_report(
         file_arg=file_arg,
-        min_matches=args.min_matches,
-        no_export=args.no_export,
+        min_matches=30,
+        no_export=False,
         stem=stem,
     )
 
