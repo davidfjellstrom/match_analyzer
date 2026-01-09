@@ -1,2 +1,0 @@
-[console_scripts]
-match_analyzer = match_analyzer.cli:main
