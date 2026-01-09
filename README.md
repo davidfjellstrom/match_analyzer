@@ -1,67 +1,36 @@
 # Match Analyzer
 
-Match Analyzer är ett Python-projekt för att analysera fotbollsmatcher baserat på CSV-data.
-Projektet fokuserar på enkla men meningsfulla analyser av matchutfall, såsom målstatistik
-och frekvenser för olika typer av resultat.
+Match Analyzer is a command-line Python application that analyzes football match data and generates league reports based on historical match results.
 
-Syftet är både att träna på systematisk Python-utveckling och att bygga ett tydligt,
-utbyggbart analysverktyg.
+The project is built as part of a Python course assignment, with a clear focus on project structure, modularity, and a clean CLI-based workflow.
 
 ---
-
-## Funktionalitet (nuvarande och planerad)
-
-Projektet är uppdelat i tydliga steg och moduler.
-
-
-### Nuvarande funktionalitet
-- Läsa matchdata från CSV-filer
-- Skriva analyserade resultat till nya CSV-filer
-- Centraliserad logging (konsol + fil)
-- Tydlig projektstruktur med separata moduler
-
-
-### Planerad funktionalitet
-- Analys av:
-  - Snittmål per liga
-  - Andel matcher över / under 2.5 mål
-  - Hur ofta båda lagen gör mål (BTTS)
-  - Home vs Away-mål
-- Kommando-rad-gränssnitt (CLI)
-- Tydligare rapportering av analysresultat
-
----
-
-## Datamodell
-
-Varje rad i CSV-filen representerar **en match** och ska innehålla följande kolumner:
-
-```text
-league,date,home_team,away_team,home_goals,away_goals
-
-
-
-## Projektstruktur
-....
-
 
 ## Installation
-....
+
+Clone the repository and create a virtual environment:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate 
+```
+
+## Usage
+
+### Run as a CLI command
+After installation, run from the project root or anywhere: 
+match_analyzer
+
+### Run as a Python module
+Alternatively, you can run the application as a module:
+python -m match_analyzer
+
+The program presents an interactive menu where the user can generate league reports for different football leagues.
 
 
-## Versionshantering
-- Projektet använder Git
-- Utveckling sker via feature branches
-- Main branch är den version som innehåller stabil kod
-- Varje funtion utvecklas och mergas separat
+## Project structure
 
 
-## Mål med projektet
-- Lära sig bygga ett strukturerat Python-projekt
-- Träna på Git, branches och commits
-- Skriva tydlig, läsbar och testbar kod
-- Bygga analyser baserade på verklig data
 
-
-## Status
-Projektet är under aktiv utveckling
+## Dependencies
+No external dependencies (stdlib only). This project solely relies on Python's built-in libraries.
