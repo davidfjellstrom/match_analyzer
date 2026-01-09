@@ -23,41 +23,49 @@ The program can, among other things:
 
 ## Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/<your-username>/match_analyzer.git
-cd match_analyzer
-```
+Follow the steps below to install the project. The instructions are compatible with macOS, Linux, and Windows.
 
-2. Create and activate a virtual environment:
-```bash
-python -m venv .venv
+1. Clone the repository and enter the project directory:
+
+git clone https://github.com/davidfjellstrom/match_analyzer.git
+cd match_analyzer
+
+2. Create and activate a virtual environment.
+
+macOS / Linux:
+python3 -m venv .venv
 source .venv/bin/activate
-```
+
+Windows (PowerShell):
+py -m venv .venv
+.venv\Scripts\Activate.ps1
 
 3. Install the project in editable mode:
-```bash
+
 pip install -e .
-```
+
+This installs the project locally and registers the `match_analyzer` CLI command.
 
 ---
 
 ## Running the Program
 
-The program can be started in two ways:
 
-```bash
+Run the program using the CLI entrypoint (recommended and OS-independent):
+
 match_analyzer
-```
 
-or:
+Alternatively, run the program as a Python module:
 
-```bash
-python -m match_analyzer
-```
+macOS / Linux:
+python3 -m match_analyzer
+
+Windows:
+py -m match_analyzer
+
+Note: On some systems (such as macOS), the `python` command may not exist. In those cases, `python3` should be used instead.
 
 When the program starts, a menu will be displayed where you can select which analysis or report to run.
-
 Generated files are saved in the `exports/` directory.
 
 ---
@@ -109,4 +117,5 @@ All dependencies are listed in `requirements.txt` and `pyproject.toml`.
 ## Version Control
 
 The project is version-controlled using Git and developed with feature branches.
+
 The final version is available as a public GitHub repository.
